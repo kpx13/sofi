@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Calendar{% endblock %}
+
+{% block extended_head %}
+    <link type="text/css" href="/static/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <script language="javascript" type="text/javascript" src="/static/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+{% endblock %}
+
+
+{% block content %}
+        <div class="row">
+            <div class="span12">
+                <div class="well">
+                    <div id="date" data-date="12.02.2012" style='margin: 0 auto; width: 230px'></div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            $("#date").datepicker({
+                format: 'dd.mm.yyyy',
+                weekStart: 1
+            });
+            $("#date").datepicker('show');
+        </script>
+{% endblock %}

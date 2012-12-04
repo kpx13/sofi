@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <title>sofi kpx | {% block title %}Главная{% endblock %}</title>
+            
+            <link href="/static/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+            <script src="/static/js/jquery.js"></script>
+            <script src="/static/bootstrap/js/bootstrap.js"></script>
+            <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+            
+            {% block extended_head %}
+            {% endblock %}
+        </head>
+        <body>
+
+
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <table style='width: 100%; text-align: center; height: 100%'>
+                                    <tr>
+                                        <td width='25%'>
+                                <a href='/'><h4> ~ sofi kpx ~ </h4></a></td>
+                                    </tr>
+                                </table>
+                    </div>
+                </div>
+            </div>
+
+                        
+
+            <div class="container">
+            
+                    <div class='row'>
+                    <div class='span12'>
+                        <div class = 'nav nav-tabs'>
+                           <li {% if 'archives' in request_url %} class='active' {% endif %} ><a href='/archives'>Archives</a><li>
+                           <li {% if 'calendar' in request_url %} class='active' {% endif %} ><a href='/calendar'>Calendar</a><li>
+                           <li {% if 'about' in request_url %} class='active' {% endif %} ><a href='/about'>About</a><li>
+                        </div>
+                    </div>
+                    </div>
+            
+                    {% block content %}
+                    {% endblock %}
+
+                    <hr />
+
+                    <footer>
+                        <p>&copy; kpx family 2012</p>
+                    </footer>
+
+            </div>
+            
+        </body>
+</html>

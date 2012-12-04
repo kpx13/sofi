@@ -1,0 +1,26 @@
+@font-face {
+font-family: Harrington; /* Имя шрифта */
+src: url('Harrington.ttf'); /* Путь к файлу со шрифтом */
+}
+p.Harrington {font-family: Harrington;font-size: 24px;}
+
+@font-face {
+font-family: Ampir; /* Имя шрифта */
+src: url('Ampir-Deco.ttf'); /* Путь к файлу со шрифтом */
+}
+p.Ampir {font-family: Ampir;font-size: 24px;}
+
+@font-face {
+font-family: Kuritza; /* Имя шрифта */
+src: url('Kuritza.ttf'); /* Путь к файлу со шрифтом */
+}
+p.Kuritza {font-family: Kuritza;font-size: 24px;}
+
+@font-face {
+font-family: Pudelinka; /* Имя шрифта */
+src: url('Pudelinka.ttf'); /* Путь к файлу со шрифтом */
+}
+p.Pudelinka {font-family: Pudelinka;font-size: 24px;}
+
+
+table {background-color: transparent}
