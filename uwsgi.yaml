@@ -1,0 +1,13 @@
+uwsgi:
+    socket: /var/tmp/sofi_uwsgi.sock
+    pythonpath: /var/www/ann/data/sofi
+    env: DJANGO_SETTINGS_MODULE=sofi.settings
+    module: sofi.wsgi
+    daemonize: /var/www/ann/data/sofi/logs/uwsgi.log
+    max-requests: 5000
+    buffer-size: 32768
+    harakiri: 30
+    reload-mercy: 8
+    master: 1
+    no-orphans: 1
+    touch-reload: /var/www/ann/data/sofi/uwsgi
