@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     'filebrowser',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'ckeditor',
     
     'pages',
     'articles',
@@ -170,6 +171,9 @@ LOGGING = {
         },
     }
 }
+
+CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
+CKEDITOR_MEDIA_PREFIX = '/media/ckeditor/'
 
 try:
     from dev import *
