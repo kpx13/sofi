@@ -22,7 +22,9 @@ urlpatterns = patterns('',
 
     url(r'^$' , views.home_page),
     url(r'^archives$' , views.archives_page),
+    url(r'^archives/(?P<tag>\w+)$' , views.archives_page),
     url(r'^calendar$' , views.calendar_page),
+    url(r'^calendar/(?P<cur_date>[0-9.]+)$' , views.calendar_page),
     url(r'^(?P<page_name>\w+)$' , views.other_page),
     
 )

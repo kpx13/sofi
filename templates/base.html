@@ -46,6 +46,29 @@
             
                     {% block content %}
                     {% endblock %}
+                    
+                    <div class="row">
+                        <div class="span6">
+                            {% for a in left_col %}
+                                <h2>{{ a.name }}</h2>
+                                {{ a.text|safe }}
+                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-success">  {{ t }}  </span></a> {% endfor %}
+                                <br />
+                                <span><b>{{ a.date }}</b></span>
+                                {% if not forloop.last %} <hr /> {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="span6">
+                            {% for a in right_col %}
+                                <h2>{{ a.name }}</h2>
+                                {{ a.text|safe }}
+                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-success">  {{ t }}  </span></a> {% endfor %}
+                                <br />
+                                <span><b>{{ a.date }}</b></span>
+                                {% if not forloop.last %} <hr /> {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
 
                     <hr />
 
