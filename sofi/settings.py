@@ -1,8 +1,8 @@
 import os
 from os.path import abspath, join, dirname
 
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -21,7 +21,7 @@ DATABASES = {
         'NAME': 'sofi',   # Or path to database file if using sqlite3.
         'USER': 'sofi',                      # Not used with sqlite3.
         'PASSWORD': 'sofi',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
