@@ -11,37 +11,11 @@
             <div class="span12">
                 <div class="well">
                         <ul class="tag-cloud">
-                            <li><a class="tag-size-4" href="/tag/Adobe%20Photoshop/">Adobe Photoshop</a></li>
-                            <li><a class="tag-size-2" href="/tag/Apache/">Apache</a></li>
-                            <li><a class="tag-size-1" href="/tag/Bootstrap/">Bootstrap</a></li>
-                            <li><a class="tag-size-4" href="/tag/C%2B%2B/">C++</a></li>
-                            <li><a class="tag-size-1" href="/tag/CSS/">CSS</a></li>
-                            <li><a class="tag-size-4" href="/tag/CorelDRAW/">CorelDRAW</a></li>
-                            <li><a class="tag-size-1" href="/tag/Debian/">Debian</a></li>
-                            <li><a class="tag-size-2" href="/tag/Django/">Django</a></li>
-                            <li><a class="tag-size-1" href="/tag/DokuWiki/">DokuWiki</a></li>
-                            <li><a class="tag-size-1" href="/tag/GIMP/">GIMP</a></li>
-                            <li><a class="tag-size-1" href="/tag/HTML/">HTML</a></li>
-                            <li><a class="tag-size-5" href="/tag/InDesign/">InDesign</a></li>
-                            <li><a class="tag-size-1" href="/tag/Inkscape/">Inkscape</a></li>
-                            <li><a class="tag-size-6" href="/tag/Javascript/">Javascript</a></li>
-                            <li><a class="tag-size-1" href="/tag/LaTeX/">LaTeX</a></li>
-                            <li><a class="tag-size-5" href="/tag/LibreOffice/">LibreOffice</a></li>
-                            <li><a class="tag-size-4" href="/tag/Linux/">Linux</a></li>
-                            <li><a class="tag-size-2" href="/tag/MS%20Office/">MS Office</a></li>
-                            <li><a class="tag-size-1" href="/tag/MediaWiki/">MediaWiki</a></li>
-                            <li><a class="tag-size-5" href="/tag/MongoDB/">MongoDB</a></li>
-                            <li><a class="tag-size-2" href="/tag/MySQL/">MySQL</a></li>
-                            <li><a class="tag-size-3" href="/tag/PostgreSQL/">PostgreSQL</a></li>
-                            <li><a class="tag-size-1" href="/tag/PyQt/">PyQt</a></li>
-                            <li><a class="tag-size-3" href="/tag/Python/">Python</a></li>
-                            <li><a class="tag-size-1" href="/tag/Qt/">Qt</a></li>
-                            <li><a class="tag-size-4" href="/tag/Scribus/">Scribus</a></li>
-                            <li><a class="tag-size-5" href="/tag/Tornado/">Tornado</a></li>
-                            <li><a class="tag-size-5" href="/tag/XeTeX/">XeTeX</a></li>
-                            <li><a class="tag-size-2" href="/tag/nginx/">nginx</a></li>
-                           
-                    </ul>
+                            
+                           {% for t in tags %}
+                                <li><a class="tag-size-4" href='/archives/{{ t.slug }}'>{{ t }}</a></li>
+                           {% endfor %}
+                        </ul>
                     
                 </div>
             </div>
