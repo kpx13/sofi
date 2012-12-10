@@ -52,7 +52,7 @@
                             {% for a in left_col %}
                                 <h2>{{ a.name }}</h2>
                                 {{ a.text|safe }}
-                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-success">  {{ t }}  </span></a> {% endfor %}
+                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-info">  {{ t }}  </span></a> {% endfor %}
                                 <br />
                                 <span><b>{{ a.date }}</b></span>
                                 {% if not forloop.last %} <hr /> {% endif %}
@@ -62,7 +62,7 @@
                             {% for a in right_col %}
                                 <h2>{{ a.name }}</h2>
                                 {{ a.text|safe }}
-                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-success">  {{ t }}  </span></a> {% endfor %}
+                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-info">  {{ t }}  </span></a> {% endfor %}
                                 <br />
                                 <span><b>{{ a.date }}</b></span>
                                 {% if not forloop.last %} <hr /> {% endif %}
