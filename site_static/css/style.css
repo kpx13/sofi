@@ -6,7 +6,7 @@ table {background-color: transparent}
 .tag-cloud{text-align:center;}
 .tag-cloud li{display:inline;margin-right:5px;line-height:22px}
 .tag-cloud li a{color:#727a90}
-.tag-cloud li a:hover{color:red}
+.tag-cloud li a:hover{color:white}
 .tag-cloud li .tag-size-1{font-size:16px}
 .tag-cloud li .tag-size-2{font-size:18px}
 .tag-cloud li .tag-size-3{font-size:20px}
