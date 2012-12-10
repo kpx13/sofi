@@ -177,7 +177,7 @@ LOGGING = {
 CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
 CKEDITOR_MEDIA_PREFIX = '/media/ckeditor/'
 
-"FILEBROWSER_EXTENSIONS" = {
+FILEBROWSER_EXTENSIONS = {
     'Folder': [''],
     'Image': ['.jpg','.jpeg','.JPG','.JPEG','.gif','.png','.tif','.tiff'],
     'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv'],
