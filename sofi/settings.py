@@ -1,8 +1,8 @@
 import os
 from os.path import abspath, join, dirname
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+DEBUG = False
+TEMPLATE_DEBUG = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -133,16 +133,16 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    'ckeditor',   
     'grappelli',
     'filebrowser',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'ckeditor',
     'taggit',
     
     'pages',
     'articles',
+    'sorl.thumbnail',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -173,6 +173,29 @@ LOGGING = {
         },
     }
 }
+
+FILE_UPLOAD_MAX_MEMORY_SIZE = 7864320
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar':
+           [
+                ['Source', '-', 'Templates'],
+                ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+                ['Undo', 'Redo', ],
+                ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+                ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+                ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar'],
+                ['RemoveFormat', 'Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+                ['Styles','Format','FontSize', 'TextColor','BGColor'],
+                ['Link','Unlink',],
+                ['Maximize', 'ShowBlocks'],
+            ],
+        'width': 1056,
+        'height': 200,
+        'toolbarCanCollapse': True,
+        'resize_enabled': True
+    }
+}	
 
 CKEDITOR_UPLOAD_PATH = os.path.join(MEDIA_ROOT, 'uploads')
 CKEDITOR_MEDIA_PREFIX = '/media/ckeditor/'

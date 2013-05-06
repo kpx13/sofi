@@ -38,7 +38,6 @@
                         <div class = 'nav nav-tabs'>
                            <li {% if 'home' in request_url %} class='active' {% endif %} ><a href='/'><h4>Home</h4></a></li>
                            <li {% if 'archives' in request_url %} class='active' {% endif %} ><a href='/archives'><h4>Archives</h4></a></li>
-                           <li {% if 'calendar' in request_url %} class='active' {% endif %} ><a href='/calendar'><h4>Calendar</h4></a></li>
                            <li {% if 'about' in request_url %} class='active' {% endif %} ><a href='/about'><h4>About</h4></a></li>
                         </div>
                     </div>
@@ -78,6 +77,35 @@
                     </footer>
 
             </div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21187957 = new Ya.Metrika({id:21187957,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/21187957" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
             
         </body>
 </html>

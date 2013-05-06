@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+            <title>Sofi Kpx | {% block title %}Главная{% endblock %}</title>
+            
+            <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+            <script src="/static/js/jquery.js"></script>
+            <script src="/static/bootstrap/js/bootstrap.js"></script>
+            <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+            
+        </head>
+        <body>
+
+
+
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <table style='width: 100%; text-align: center; height: 100%'>
+                                    <tr>
+                                        <td width='25%'>
+                                        <h1> Sofi Kpx </h1></td>
+                                    </tr>
+                                </table>
+                    </div>
+                </div>
+            </div>
+
+                        
+
+            <div class="container">
+            
+                    <div class='row'>
+                    <div class='span12'>
+                        <div class = 'nav nav-tabs'>
+                           <li {% if 'home' in request_url %} class='active' {% endif %} ><a href='/'><h4>Home</h4></a></li>
+                           <li {% if 'archives' in request_url %} class='active' {% endif %} ><a href='/archives'><h4>Archives</h4></a></li>
+                           <li {% if 'about' in request_url %} class='active' {% endif %} ><a href='/about'><h4>About</h4></a></li>
+                        </div>
+                    </div>
+                    </div>
+            
+			<h2>404.</h2><p>Страница не найдена.</p>                    
+                    <div class="row">
+                        <div class="span6">
+                            {% for a in left_col %}
+                                <h2>{{ a.name }}</h2>
+                                {{ a.text|safe }}
+                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-info">  {{ t }}  </span></a> {% endfor %}
+                                <br />
+                                <span><b>{{ a.date }}</b></span>
+                                {% if not forloop.last %} <hr /> {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="span6">
+                            {% for a in right_col %}
+                                <h2>{{ a.name }}</h2>
+                                {{ a.text|safe }}
+                                {% for t in a.tags.all %}<a href='/archives/{{ t.slug }}'><span class="label label-info">  {{ t }}  </span></a> {% endfor %}
+                                <br />
+                                <span><b>{{ a.date }}</b></span>
+                                {% if not forloop.last %} <hr /> {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <footer>
+                        <p>&copy; kpx family 2012</p>
+			<p><a href='http://webgenesis.ru/' target='blank'>Создание сайта</a> <br /></p>
+                    </footer>
+
+            </div>
+            
+        </body>
+</html>
