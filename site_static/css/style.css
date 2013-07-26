@@ -1,5 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin);
-* {font-family: 'Poiret One', sans-serif !important;}
+/* @import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic,latin); */
+
+@font-face {
+font-family: UnivRom; /* Имя шрифта */
+src: url('UnivRom.ttf') format("truetype"); /* Путь к файлу со шрифтом */
+}
+* {font-family: 'UnivRom', sans-serif !important;}
 
 table {background-color: transparent}
 
